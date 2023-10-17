@@ -2,6 +2,12 @@
 html {
     box-sizing: border-box;
     margin: 0;
+    overflow-y: hidden;
+    
+    scrollbar-width: none;
+    .example::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 body {
@@ -14,13 +20,19 @@ body {
     .container {
         display: flex;
         width: 400vw;
-        overflow-x: scroll; /* Изменение стиля overflow-x */
-    }
+        overflow-x: scroll;
+        /* Изменение стиля overflow-x */
 
-    section {
-        flex: 0 0 100vw;
-        min-height: 100vh;
-        transition: transform 0.3s ease-out;
-        /* Добавленный переход для эффекта наложения */
+        section {
+            flex: 0 0 100vw;
+            min-height: 100vh;
+            transition: transform 0.3s ease-out;
+            /* Добавленный переход для эффекта наложения */
+        }
+
+        .welcome-box {
+            background-image: url('../img/welcome-bg.jpg');
+            background-size: contain;
+        }
     }
 }

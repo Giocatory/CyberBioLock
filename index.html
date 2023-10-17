@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style/main.css">
 </head>
+
 <body onwheel="scrollHorizontally(event)">
-    <div class="container">
-      <section style="background-color: #f2f2f2;">Section 1</section>
-      <section style="background-color: #d3d3d3;">Section 2</section>
-      <section style="background-color: #a3a3a3;">Section 3</section>
-      <section style="background-color: #828282;">Section 4</section>
-    </div>
-  
-    <script>
-      let container = document.querySelector('.container');
-  
-      function scrollHorizontally(e) {
-        e = window.event || e;
-        const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-        container.scrollLeft += delta * -100;
-        e.preventDefault();
-      }
-    </script>
-  </body>
+  <div class="container">
+    <section class="welcome-box">Section 1</section>
+    <section style="background-color: #d3d3d3;">Section 2</section>
+    <section style="background-color: #a3a3a3;">Section 3</section>
+    <section style="background-color: #828282;">Section 4</section>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>
